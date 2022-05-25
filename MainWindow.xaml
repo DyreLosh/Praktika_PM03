@@ -23,6 +23,10 @@
 
         <Frame NavigationUIVisibility='Hidden' Grid.Column="1" x:Name="MainFrame" Margin="0,100,0,10" HorizontalAlignment="Left" Width="auto" Height="auto" VerticalAlignment="Top" />
         <Button Content="Back" Grid.Column="1" HorizontalAlignment="Right" Height="18" Margin="0,10,10,0" VerticalAlignment="Top" Width="32" Click="Button_Click" Name="Btnback" Background="#FFB5DEFA"/>
+        <ComboBox Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="394,24,0,0" VerticalAlignment="Top" Width="127"/>
+        <Ellipse Grid.Column="1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="42" Margin="540,13,0,0" Stroke="Black" VerticalAlignment="Top" Width="47"/>
+        <RadioButton Content="Активные" Grid.Column="1" HorizontalAlignment="Left" Height="17" Margin="32,552,0,0" VerticalAlignment="Top" Width="114"/>
+        <RadioButton Content="Неактивные" Grid.Column="1" HorizontalAlignment="Left" Height="17" Margin="208,552,0,0" VerticalAlignment="Top" Width="127"/>
 
 
 

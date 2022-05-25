@@ -5,10 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Sessia"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Control">
+      d:DesignHeight="450"
+      Title="Control" Width="650">
 
-    <Grid Background="#FF4A67F7">
+    <Grid Background="#FF4A67F7" >
         <Grid.RowDefinitions>
             <RowDefinition Height= "60"/>
             <RowDefinition Height= "370"/>
@@ -16,9 +16,11 @@
         <Grid Height="auto" Width="auto" ></Grid>
         <TextBlock HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" TextWrapping="Wrap" Text="Управление оборудованием" VerticalAlignment="Top" Width="323" Grid.Column="0" FontSize="24"/>
         <Image Source="Resources\Оборудование.jpg" HorizontalAlignment="Right" Height="70" Width="57" VerticalAlignment="Top"/>
-        <Button Content="Контроль состояния" Height="285" Margin="10,10,640,0" Grid.Row="1" VerticalAlignment="Top" Click="Button_Click"/>
-        <Button Content="Настройка оборудования" Height="285" Margin="315,10,335,0" Grid.Row="1" VerticalAlignment="Top"/>
-        <Button Content="Расчет количества &#xD;&#xA;базовых станций" Height="285" Margin="640,10,10,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <DataGrid HorizontalAlignment="Left" Height="356" Margin="0,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="670"  HorizontalScrollBarVisibility="Visible"/>
+        <Button Content="Контроль состояния" Height="285" Width="100" Margin="-500,10,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Настройка оборудования" Height="285" Width="100" Margin="-00,10,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Button Content="Расчет количества &#xD;&#xA;базовых станций" Height="285" Width="100" Margin="500,10,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+
 
 
     </Grid>

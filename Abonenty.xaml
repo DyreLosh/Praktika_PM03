@@ -18,7 +18,7 @@
             <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
         <TextBlock HorizontalAlignment="Left" Height="43" Margin="10,0,0,37" TextWrapping="Wrap" Text="Абоненты THC" VerticalAlignment="Bottom" Width="246" FontSize="36" Grid.ColumnSpan="2"/>
-        <DataGrid x:Name="AbonentGrid" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1" Margin="0,0,0,10" Grid.ColumnSpan="2">
+        <DataGrid x:Name="AbonentGrid" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1" Margin="0,0,0,10" Grid.ColumnSpan="2" HorizontalScrollBarVisibility="Visible">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ФИО" Width="*" Binding="{Binding ФИО}" />
                 <DataGridTextColumn Header="Абонентский номер"  Width="*" Binding="{Binding Номер_абонента}" />

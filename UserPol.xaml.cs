@@ -29,5 +29,6 @@ namespace Sessia
         {
             Manager.MainFrame.Navigate(new User());
         }
+
     }
 }
