@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EAF013D6-0E08-409E-BC74-3F698258B371}</ProjectGuid>
+    <ProjectGuid>{4D0E7906-53D7-4C35-B531-2A57F1A7A6C9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Сессия__1</RootNamespace>
-    <AssemblyName>Сессия__1</AssemblyName>
+    <RootNamespace>Sessia_2</RootNamespace>
+    <AssemblyName>Sessia_2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,18 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -63,44 +53,7 @@
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>Telecom_2022.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Telecom_2022.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Telecom_2022.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Telecom_2022.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Telecom_2022.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Telecom_2022.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Telecom_2022.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Данные_по_оборудованию.cs">
-      <DependentUpon>Telecom_2022.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Данные_по_подключению_абонентов.cs">
-      <DependentUpon>Telecom_2022.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Пользователи.cs">
-      <DependentUpon>Telecom_2022.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Роли.cs">
-      <DependentUpon>Telecom_2022.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Тип_оборудования.cs">
-      <DependentUpon>Telecom_2022.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Тип_порта.cs">
-      <DependentUpon>Telecom_2022.tt</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -132,45 +85,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <EntityDeploy Include="Telecom_2022.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Telecom_2022.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Telecom_2022.edmx.diagram">
-      <DependentUpon>Telecom_2022.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\На авторизацию_Обновление кода.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Лого.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="На авторизацию_Обновление кода.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Telecom_2022.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Telecom_2022.edmx</DependentUpon>
-      <LastGenOutput>Telecom_2022.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Telecom_2022.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Telecom_2022.edmx</DependentUpon>
-      <LastGenOutput>Telecom_2022.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
