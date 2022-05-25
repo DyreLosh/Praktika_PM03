@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище Lesson3" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="admir">
+          <Key>
+            <PropertyRef Name="Идентификатор" />
+          </Key>
+          <Property Name="Cписок_базовых_станций_сети_МТС" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Идентификатор" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Адрес_площадки" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Место_расположения" Type="nvarchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <EntityType Name="basil">
+          <Key>
+            <PropertyRef Name="Идентификатор" />
+          </Key>
+          <Property Name="Cписок_базовых_станций_сети_МТС" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Идентификатор" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Адрес_площадки" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Место_расположения" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="petr">
+          <Key>
+            <PropertyRef Name="Идентификатор" />
+          </Key>
+          <Property Name="Cписок_базовых_станций_сети_МТС" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Идентификатор" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Адрес_площадки" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Место_расположения" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Абонентское оборудование">
+          <Key>
+            <PropertyRef Name="Серийный_номер" />
+          </Key>
+          <Property Name="Серийный_номер" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Наименование оборудования абонента" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Порты" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Стандарт_передачи" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Скорость" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Адрес_абонента" Type="nvarchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Абоненты">
+          <Key>
+            <PropertyRef Name="Номер_абонента" />
+          </Key>
+          <Property Name="Номер_абонента" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ФИО" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Пол" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Дата_рождения" Type="date" Nullable="false" />
+          <Property Name="Номер_телефона" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Электронная_почта" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Адрес_прописки" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Адрес_проживания" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Серия_и_номер_паспорта" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Код_подразделения" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Кем_выдан" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Дата_выдачи_паспорта" Type="date" Nullable="false" />
+          <Property Name="Номер_договора" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Дата_заключения_договора" Type="date" Nullable="false" />
+          <Property Name="Тип_договора" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Причина_расторжения_договора" Type="nvarchar" MaxLength="50" />
+          <Property Name="Лицевой_счет" Type="int" Nullable="false" />
+          <Property Name="Услуги" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Услуги2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Услуги3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Дата_расторжения_договора" Type="date" />
+          <Property Name="column22" Type="nvarchar" MaxLength="50" />
+          <Property Name="Серийный_номер_оборудования" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Базовые станции">
+          <Key>
+            <PropertyRef Name="ID_базовой_станции" />
+          </Key>
+          <Property Name="ID_базовой_станции" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Название_БС" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Площадь_зоны_покрытия_кв_км" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Частота_Гц" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Тип_антенны" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Диапазон_показателей_хэндовера" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Стандарт" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Координаты_установки" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Заявки CRM">
+          <Key>
+            <PropertyRef Name="номер_заявки" />
+          </Key>
+          <Property Name="номер_заявки" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Дата_создания" Type="date" Nullable="false" />
+          <Property Name="ЛС" Type="int" Nullable="false" />
+          <Property Name="Услуга" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Вид_услуги" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Тип_услуги" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Статус" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Тип_оборудования" Type="nvarchar" MaxLength="50" />
+          <Property Name="Описание_проблемы" Type="nvarchar" MaxLength="100" />
+          <Property Name="Дата_закрытия" Type="date" />
+          <Property Name="Тип_проблема" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Lesson3.dbo.Информация для сотрудников" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Информация для сотрудников">
+          <Key>
+            <PropertyRef Name="Кому" />
+          </Key>
+          <Property Name="Кому" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Дата" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Магистраль">
+          <Key>
+            <PropertyRef Name="Серийный_номер" />
+          </Key>
+          <Property Name="Серийный_номер" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Название магистальных сетей" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="частота" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="коэффициент_затухания" Type="nvarchar" MaxLength="50" />
+          <Property Name="технология_передачи_данных" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="расположение" Type="nvarchar" MaxLength="500" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Lesson3.dbo.Платежи абонентов" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Платежи абонентов">
+          <Key>
+            <PropertyRef Name="ID_платежа" />
+            <PropertyRef Name="Дата_платежа" />
+            <PropertyRef Name="Сумма_платежа" />
+            <PropertyRef Name="Дата_баланса" />
+            <PropertyRef Name="Номер_абонента" />
+          </Key>
+          <Property Name="ID_платежа" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Дата_платежа" Type="date" Nullable="false" />
+          <Property Name="Сумма_платежа" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Баланс_абонента" Type="nvarchar" MaxLength="50" />
+          <Property Name="Дата_баланса" Type="date" Nullable="false" />
+          <Property Name="Задолженность" Type="nvarchar" MaxLength="50" />
+          <Property Name="Номер_абонента" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Сети доступа">
+          <Key>
+            <PropertyRef Name="Серийный_номер" />
+          </Key>
+          <Property Name="Серийный_номер" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Наименование сетей доступа" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="количество_портов" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="стандарт_передачи_данных" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="частота" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="интерфейсы" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="скорость_передачи_данных" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="место_расположения" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Сотрудники">
+          <Key>
+            <PropertyRef Name="ID_сотрудника" />
+          </Key>
+          <Property Name="ФИО" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Роль" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ID_сотрудника" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Тарифы">
+          <Key>
+            <PropertyRef Name="ID_тарифа" />
+          </Key>
+          <Property Name="ID_тарифа" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Услуга" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Название_тарифа" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Условия" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Стоимость_руб_мес" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Тарифы абонентов">
+          <Key>
+            <PropertyRef Name="ЛС_абонента" />
+          </Key>
+          <Property Name="ЛС_абонента" Type="int" Nullable="false" />
+          <Property Name="Тарифы_абонента" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Хранилище Lesson3Container">
+          <EntitySet Name="admir" EntityType="Self.admir" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="basil" EntityType="Self.basil" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="petr" EntityType="Self.petr" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Абонентское оборудование" EntityType="Self.Абонентское оборудование" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Абоненты" EntityType="Self.Абоненты" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Базовые станции" EntityType="Self.Базовые станции" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Заявки CRM" EntityType="Self.Заявки CRM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Магистраль" EntityType="Self.Магистраль" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Сети доступа" EntityType="Self.Сети доступа" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Сотрудники" EntityType="Self.Сотрудники" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Тарифы" EntityType="Self.Тарифы" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Тарифы абонентов" EntityType="Self.Тарифы абонентов" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Информация для сотрудников" EntityType="Self.Информация для сотрудников" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Информация для сотрудников].[Кому] AS [Кому], 
+    [Информация для сотрудников].[Дата] AS [Дата]
+    FROM [dbo].[Информация для сотрудников] AS [Информация для сотрудников]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Платежи абонентов" EntityType="Self.Платежи абонентов" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Платежи абонентов].[ID_платежа] AS [ID_платежа], 
+    [Платежи абонентов].[Дата_платежа] AS [Дата_платежа], 
+    [Платежи абонентов].[Сумма_платежа] AS [Сумма_платежа], 
+    [Платежи абонентов].[Баланс_абонента] AS [Баланс_абонента], 
+    [Платежи абонентов].[Дата_баланса] AS [Дата_баланса], 
+    [Платежи абонентов].[Задолженность] AS [Задолженность], 
+    [Платежи абонентов].[Номер_абонента] AS [Номер_абонента]
+    FROM [dbo].[Платежи абонентов] AS [Платежи абонентов]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Lesson3" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="admir">
+          <Key>
+            <PropertyRef Name="Идентификатор" />
+          </Key>
+          <Property Name="Cписок_базовых_станций_сети_МТС" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Идентификатор" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Адрес_площадки" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Место_расположения" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="basil">
+          <Key>
+            <PropertyRef Name="Идентификатор" />
+          </Key>
+          <Property Name="Cписок_базовых_станций_сети_МТС" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Идентификатор" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Адрес_площадки" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Место_расположения" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="petr">
+          <Key>
+            <PropertyRef Name="Идентификатор" />
+          </Key>
+          <Property Name="Cписок_базовых_станций_сети_МТС" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Идентификатор" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Адрес_площадки" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Место_расположения" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Абонентское_оборудование">
+          <Key>
+            <PropertyRef Name="Серийный_номер" />
+          </Key>
+          <Property Name="Серийный_номер" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Наименование_оборудования_абонента" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Порты" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Стандарт_передачи" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Скорость" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Адрес_абонента" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Абоненты">
+          <Key>
+            <PropertyRef Name="Номер_абонента" />
+          </Key>
+          <Property Name="Номер_абонента" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ФИО" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Пол" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Дата_рождения" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Номер_телефона" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Электронная_почта" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Адрес_прописки" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Адрес_проживания" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Серия_и_номер_паспорта" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Код_подразделения" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Кем_выдан" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Дата_выдачи_паспорта" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Номер_договора" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Дата_заключения_договора" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Тип_договора" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Причина_расторжения_договора" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Лицевой_счет" Type="Int32" Nullable="false" />
+          <Property Name="Услуги" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Услуги2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Услуги3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Дата_расторжения_договора" Type="DateTime" Precision="0" />
+          <Property Name="column22" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Серийный_номер_оборудования" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Базовые_станции">
+          <Key>
+            <PropertyRef Name="ID_базовой_станции" />
+          </Key>
+          <Property Name="ID_базовой_станции" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Название_БС" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Площадь_зоны_покрытия_кв_км" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Частота_Гц" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Тип_антенны" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Диапазон_показателей_хэндовера" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Стандарт" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Координаты_установки" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Заявки_CRM">
+          <Key>
+            <PropertyRef Name="номер_заявки" />
+          </Key>
+          <Property Name="номер_заявки" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Дата_создания" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ЛС" Type="Int32" Nullable="false" />
+          <Property Name="Услуга" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Вид_услуги" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Тип_услуги" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Статус" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Тип_оборудования" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Описание_проблемы" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Дата_закрытия" Type="DateTime" Precision="0" />
+          <Property Name="Тип_проблема" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Магистраль">
+          <Key>
+            <PropertyRef Name="Серийный_номер" />
+          </Key>
+          <Property Name="Серийный_номер" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Название_магистальных_сетей" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="частота" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="коэффициент_затухания" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="технология_передачи_данных" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="расположение" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Сети_доступа">
+          <Key>
+            <PropertyRef Name="Серийный_номер" />
+          </Key>
+          <Property Name="Серийный_номер" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Наименование_сетей_доступа" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="количество_портов" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="стандарт_передачи_данных" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="частота" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="интерфейсы" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="скорость_передачи_данных" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="место_расположения" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Сотрудники">
+          <Key>
+            <PropertyRef Name="ID_сотрудника" />
+          </Key>
+          <Property Name="ФИО" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Роль" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ID_сотрудника" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Тарифы">
+          <Key>
+            <PropertyRef Name="ID_тарифа" />
+          </Key>
+          <Property Name="ID_тарифа" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Услуга" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Название_тарифа" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Условия" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Стоимость_руб_мес" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Тарифы_абонентов">
+          <Key>
+            <PropertyRef Name="ЛС_абонента" />
+          </Key>
+          <Property Name="ЛС_абонента" Type="Int32" Nullable="false" />
+          <Property Name="Тарифы_абонента" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Информация_для_сотрудников">
+          <Key>
+            <PropertyRef Name="Кому" />
+          </Key>
+          <Property Name="Кому" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Дата" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Платежи_абонентов">
+          <Key>
+            <PropertyRef Name="ID_платежа" />
+            <PropertyRef Name="Дата_платежа" />
+            <PropertyRef Name="Сумма_платежа" />
+            <PropertyRef Name="Дата_баланса" />
+            <PropertyRef Name="Номер_абонента" />
+          </Key>
+          <Property Name="ID_платежа" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Дата_платежа" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Сумма_платежа" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Баланс_абонента" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Дата_баланса" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Задолженность" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Номер_абонента" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Lesson3Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="admir" EntityType="Self.admir" />
+          <EntitySet Name="basil" EntityType="Self.basil" />
+          <EntitySet Name="petr" EntityType="Self.petr" />
+          <EntitySet Name="Абонентское_оборудование" EntityType="Self.Абонентское_оборудование" />
+          <EntitySet Name="Абоненты" EntityType="Self.Абоненты" />
+          <EntitySet Name="Базовые_станции" EntityType="Self.Базовые_станции" />
+          <EntitySet Name="Заявки_CRM" EntityType="Self.Заявки_CRM" />
+          <EntitySet Name="Магистраль" EntityType="Self.Магистраль" />
+          <EntitySet Name="Сети_доступа" EntityType="Self.Сети_доступа" />
+          <EntitySet Name="Сотрудники" EntityType="Self.Сотрудники" />
+          <EntitySet Name="Тарифы" EntityType="Self.Тарифы" />
+          <EntitySet Name="Тарифы_абонентов" EntityType="Self.Тарифы_абонентов" />
+          <EntitySet Name="Информация_для_сотрудников" EntityType="Self.Информация_для_сотрудников" />
+          <EntitySet Name="Платежи_абонентов" EntityType="Self.Платежи_абонентов" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище Lesson3Container" CdmEntityContainer="Lesson3Entities">
+          <EntitySetMapping Name="admir">
+            <EntityTypeMapping TypeName="Lesson3.admir">
+              <MappingFragment StoreEntitySet="admir">
+                <ScalarProperty Name="Cписок_базовых_станций_сети_МТС" ColumnName="Cписок_базовых_станций_сети_МТС" />
+                <ScalarProperty Name="Идентификатор" ColumnName="Идентификатор" />
+                <ScalarProperty Name="Адрес_площадки" ColumnName="Адрес_площадки" />
+                <ScalarProperty Name="Место_расположения" ColumnName="Место_расположения" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="basil">
+            <EntityTypeMapping TypeName="Lesson3.basil">
+              <MappingFragment StoreEntitySet="basil">
+                <ScalarProperty Name="Cписок_базовых_станций_сети_МТС" ColumnName="Cписок_базовых_станций_сети_МТС" />
+                <ScalarProperty Name="Идентификатор" ColumnName="Идентификатор" />
+                <ScalarProperty Name="Адрес_площадки" ColumnName="Адрес_площадки" />
+                <ScalarProperty Name="Место_расположения" ColumnName="Место_расположения" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="petr">
+            <EntityTypeMapping TypeName="Lesson3.petr">
+              <MappingFragment StoreEntitySet="petr">
+                <ScalarProperty Name="Cписок_базовых_станций_сети_МТС" ColumnName="Cписок_базовых_станций_сети_МТС" />
+                <ScalarProperty Name="Идентификатор" ColumnName="Идентификатор" />
+                <ScalarProperty Name="Адрес_площадки" ColumnName="Адрес_площадки" />
+                <ScalarProperty Name="Место_расположения" ColumnName="Место_расположения" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Абонентское_оборудование">
+            <EntityTypeMapping TypeName="Lesson3.Абонентское_оборудование">
+              <MappingFragment StoreEntitySet="Абонентское оборудование">
+                <ScalarProperty Name="Серийный_номер" ColumnName="Серийный_номер" />
+                <ScalarProperty Name="Наименование_оборудования_абонента" ColumnName="Наименование оборудования абонента" />
+                <ScalarProperty Name="Порты" ColumnName="Порты" />
+                <ScalarProperty Name="Стандарт_передачи" ColumnName="Стандарт_передачи" />
+                <ScalarProperty Name="Скорость" ColumnName="Скорость" />
+                <ScalarProperty Name="Адрес_абонента" ColumnName="Адрес_абонента" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Абоненты">
+            <EntityTypeMapping TypeName="Lesson3.Абоненты">
+              <MappingFragment StoreEntitySet="Абоненты">
+                <ScalarProperty Name="Номер_абонента" ColumnName="Номер_абонента" />
+                <ScalarProperty Name="ФИО" ColumnName="ФИО" />
+                <ScalarProperty Name="Пол" ColumnName="Пол" />
+                <ScalarProperty Name="Дата_рождения" ColumnName="Дата_рождения" />
+                <ScalarProperty Name="Номер_телефона" ColumnName="Номер_телефона" />
+                <ScalarProperty Name="Электронная_почта" ColumnName="Электронная_почта" />
+                <ScalarProperty Name="Адрес_прописки" ColumnName="Адрес_прописки" />
+                <ScalarProperty Name="Адрес_проживания" ColumnName="Адрес_проживания" />
+                <ScalarProperty Name="Серия_и_номер_паспорта" ColumnName="Серия_и_номер_паспорта" />
+                <ScalarProperty Name="Код_подразделения" ColumnName="Код_подразделения" />
+                <ScalarProperty Name="Кем_выдан" ColumnName="Кем_выдан" />
+                <ScalarProperty Name="Дата_выдачи_паспорта" ColumnName="Дата_выдачи_паспорта" />
+                <ScalarProperty Name="Номер_договора" ColumnName="Номер_договора" />
+                <ScalarProperty Name="Дата_заключения_договора" ColumnName="Дата_заключения_договора" />
+                <ScalarProperty Name="Тип_договора" ColumnName="Тип_договора" />
+                <ScalarProperty Name="Причина_расторжения_договора" ColumnName="Причина_расторжения_договора" />
+                <ScalarProperty Name="Лицевой_счет" ColumnName="Лицевой_счет" />
+                <ScalarProperty Name="Услуги" ColumnName="Услуги" />
+                <ScalarProperty Name="Услуги2" ColumnName="Услуги2" />
+                <ScalarProperty Name="Услуги3" ColumnName="Услуги3" />
+                <ScalarProperty Name="Дата_расторжения_договора" ColumnName="Дата_расторжения_договора" />
+                <ScalarProperty Name="column22" ColumnName="column22" />
+                <ScalarProperty Name="Серийный_номер_оборудования" ColumnName="Серийный_номер_оборудования" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Базовые_станции">
+            <EntityTypeMapping TypeName="Lesson3.Базовые_станции">
+              <MappingFragment StoreEntitySet="Базовые станции">
+                <ScalarProperty Name="ID_базовой_станции" ColumnName="ID_базовой_станции" />
+                <ScalarProperty Name="Название_БС" ColumnName="Название_БС" />
+                <ScalarProperty Name="Площадь_зоны_покрытия_кв_км" ColumnName="Площадь_зоны_покрытия_кв_км" />
+                <ScalarProperty Name="Частота_Гц" ColumnName="Частота_Гц" />
+                <ScalarProperty Name="Тип_антенны" ColumnName="Тип_антенны" />
+                <ScalarProperty Name="Диапазон_показателей_хэндовера" ColumnName="Диапазон_показателей_хэндовера" />
+                <ScalarProperty Name="Стандарт" ColumnName="Стандарт" />
+                <ScalarProperty Name="Координаты_установки" ColumnName="Координаты_установки" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Заявки_CRM">
+            <EntityTypeMapping TypeName="Lesson3.Заявки_CRM">
+              <MappingFragment StoreEntitySet="Заявки CRM">
+                <ScalarProperty Name="номер_заявки" ColumnName="номер_заявки" />
+                <ScalarProperty Name="Дата_создания" ColumnName="Дата_создания" />
+                <ScalarProperty Name="ЛС" ColumnName="ЛС" />
+                <ScalarProperty Name="Услуга" ColumnName="Услуга" />
+                <ScalarProperty Name="Вид_услуги" ColumnName="Вид_услуги" />
+                <ScalarProperty Name="Тип_услуги" ColumnName="Тип_услуги" />
+                <ScalarProperty Name="Статус" ColumnName="Статус" />
+                <ScalarProperty Name="Тип_оборудования" ColumnName="Тип_оборудования" />
+                <ScalarProperty Name="Описание_проблемы" ColumnName="Описание_проблемы" />
+                <ScalarProperty Name="Дата_закрытия" ColumnName="Дата_закрытия" />
+                <ScalarProperty Name="Тип_проблема" ColumnName="Тип_проблема" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Магистраль">
+            <EntityTypeMapping TypeName="Lesson3.Магистраль">
+              <MappingFragment StoreEntitySet="Магистраль">
+                <ScalarProperty Name="Серийный_номер" ColumnName="Серийный_номер" />
+                <ScalarProperty Name="Название_магистальных_сетей" ColumnName="Название магистальных сетей" />
+                <ScalarProperty Name="частота" ColumnName="частота" />
+                <ScalarProperty Name="коэффициент_затухания" ColumnName="коэффициент_затухания" />
+                <ScalarProperty Name="технология_передачи_данных" ColumnName="технология_передачи_данных" />
+                <ScalarProperty Name="расположение" ColumnName="расположение" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Сети_доступа">
+            <EntityTypeMapping TypeName="Lesson3.Сети_доступа">
+              <MappingFragment StoreEntitySet="Сети доступа">
+                <ScalarProperty Name="Серийный_номер" ColumnName="Серийный_номер" />
+                <ScalarProperty Name="Наименование_сетей_доступа" ColumnName="Наименование сетей доступа" />
+                <ScalarProperty Name="количество_портов" ColumnName="количество_портов" />
+                <ScalarProperty Name="стандарт_передачи_данных" ColumnName="стандарт_передачи_данных" />
+                <ScalarProperty Name="частота" ColumnName="частота" />
+                <ScalarProperty Name="интерфейсы" ColumnName="интерфейсы" />
+                <ScalarProperty Name="скорость_передачи_данных" ColumnName="скорость_передачи_данных" />
+                <ScalarProperty Name="место_расположения" ColumnName="место_расположения" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Сотрудники">
+            <EntityTypeMapping TypeName="Lesson3.Сотрудники">
+              <MappingFragment StoreEntitySet="Сотрудники">
+                <ScalarProperty Name="ФИО" ColumnName="ФИО" />
+                <ScalarProperty Name="Роль" ColumnName="Роль" />
+                <ScalarProperty Name="ID_сотрудника" ColumnName="ID_сотрудника" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Тарифы">
+            <EntityTypeMapping TypeName="Lesson3.Тарифы">
+              <MappingFragment StoreEntitySet="Тарифы">
+                <ScalarProperty Name="ID_тарифа" ColumnName="ID_тарифа" />
+                <ScalarProperty Name="Услуга" ColumnName="Услуга" />
+                <ScalarProperty Name="Название_тарифа" ColumnName="Название_тарифа" />
+                <ScalarProperty Name="Условия" ColumnName="Условия" />
+                <ScalarProperty Name="Стоимость_руб_мес" ColumnName="Стоимость_руб_мес" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Тарифы_абонентов">
+            <EntityTypeMapping TypeName="Lesson3.Тарифы_абонентов">
+              <MappingFragment StoreEntitySet="Тарифы абонентов">
+                <ScalarProperty Name="ЛС_абонента" ColumnName="ЛС_абонента" />
+                <ScalarProperty Name="Тарифы_абонента" ColumnName="Тарифы_абонента" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Информация_для_сотрудников">
+            <EntityTypeMapping TypeName="Lesson3.Информация_для_сотрудников">
+              <MappingFragment StoreEntitySet="Информация для сотрудников">
+                <ScalarProperty Name="Кому" ColumnName="Кому" />
+                <ScalarProperty Name="Дата" ColumnName="Дата" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Платежи_абонентов">
+            <EntityTypeMapping TypeName="Lesson3.Платежи_абонентов">
+              <MappingFragment StoreEntitySet="Платежи абонентов">
+                <ScalarProperty Name="ID_платежа" ColumnName="ID_платежа" />
+                <ScalarProperty Name="Дата_платежа" ColumnName="Дата_платежа" />
+                <ScalarProperty Name="Сумма_платежа" ColumnName="Сумма_платежа" />
+                <ScalarProperty Name="Баланс_абонента" ColumnName="Баланс_абонента" />
+                <ScalarProperty Name="Дата_баланса" ColumnName="Дата_баланса" />
+                <ScalarProperty Name="Задолженность" ColumnName="Задолженность" />
+                <ScalarProperty Name="Номер_абонента" ColumnName="Номер_абонента" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

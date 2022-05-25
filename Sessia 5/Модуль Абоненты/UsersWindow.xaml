@@ -1,0 +1,31 @@
+﻿<Page x:Class="Lesson3.UsersWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Lesson3"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="505"
+      Title="UsersWindow">
+
+
+    <Grid Background="#FFF0F0F0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <TextBlock VerticalAlignment="Center" Margin="25,0,197,0" FontSize="28">Абоненты ТНС</TextBlock>
+        <DataGrid x:Name="usersGrid" AutoGenerateColumns="False" IsReadOnly="True" Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Visible">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ФИО" Width="*" Binding="{Binding ФИО}" />
+                <DataGridTextColumn Header="Абонентский номер"  Width="*" Binding="{Binding Номер_абонента}" />
+                <DataGridTextColumn Header="Лицевой счет"  Width="*" Binding="{Binding Лицевой_счет}"/>
+                <DataGridTextColumn Header="Услуги"  Width="*" Binding="{Binding Услуги}"/>
+                <DataGridTextColumn Header="Номер договора"  Width="*" Binding="{Binding Номер_договора}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <CheckBox x:Name="checkActiv" Checked="checkActiv_Checked"  Content="Активные" HorizontalAlignment="Left" Margin="60,0,0,0" Grid.Row="2" VerticalAlignment="Center" />
+
+    </Grid>
+</Page>

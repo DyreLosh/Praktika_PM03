@@ -1,0 +1,73 @@
+﻿<Page x:Class="Lesson3.addWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Lesson3"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="addWindow">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions >
+            <RowDefinition  Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            
+
+        </Grid.RowDefinitions>
+
+        <TextBlock  Text="Номер заявки" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" />
+        <TextBlock  Text="Дата создания" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+        <TextBlock  Text="Лицевой счет абонента" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+        <TextBlock  Text="Услуга" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+        <TextBlock  Text="Вид услуги" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+        <TextBlock  Text="Тип услуги" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+        <TextBlock  Text="Статус" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+        <TextBlock  Text="Тип оборудования клиента" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+        <TextBlock  Text="Тип проблемы" Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+        <TextBlock  Text="Описание проблемы" Grid.Row="9" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+        <TextBlock  Text="Дата закрытия" Grid.Row="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+
+        <TextBox Text="{Binding номер_заявки}" Grid.Row="0" Grid.Column="1"  />
+        <TextBox Text="{Binding Дата_создания}" Grid.Row="1" Grid.Column="1"/>
+
+        <ComboBox Text="{Binding ЛС}" x:Name="LSBox" Grid.Row="2" Grid.Column="1">
+            
+        </ComboBox>
+
+
+        <ComboBox Text="{Binding Услуга}" Grid.Row="3" Grid.Column="1">
+            <ComboBoxItem>Интернет</ComboBoxItem>
+            <ComboBoxItem>Мобильная связь</ComboBoxItem>
+            <ComboBoxItem>Телевидение</ComboBoxItem>
+            <ComboBoxItem>Видеонаблюдение</ComboBoxItem>
+        </ComboBox>
+        <TextBox Text="{Binding Вид_услуги}" Grid.Row="4" Grid.Column="1"/>
+        <TextBox Text="{Binding Тип_услуги}" Grid.Row="5" Grid.Column="1"/>
+        <ComboBox Text="{Binding Статус}" Grid.Row="6" Grid.Column="1">
+            <ComboBoxItem>Новая</ComboBoxItem>
+            <ComboBoxItem>Требует выезда</ComboBoxItem>
+            <ComboBoxItem>Закрыта</ComboBoxItem>
+        </ComboBox>
+        <TextBox Text="{Binding Тип_оборудования}" Grid.Row="7" Grid.Column="1"/>
+        <TextBox Text="{Binding Тип_проблема}" Grid.Row="8" Grid.Column="1"/>
+        <TextBox Text="{Binding Дата_закрытия}" Grid.Row="9" Grid.Column="1"/>
+        <TextBox Grid.Row="10" Grid.Column="1"/>
+        <Button x:Name="btnSave" Content="Сохранить" Grid.Column="1" Grid.Row="11" Click="btnSave_Click"/>
+    </Grid>
+</Page>
