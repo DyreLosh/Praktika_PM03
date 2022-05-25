@@ -10,18 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Сессия_2
+namespace Sessia
 {
     /// <summary>
-    /// Логика взаимодействия для Info_client.xaml
+    /// Логика взаимодействия для Control.xaml
     /// </summary>
-    public partial class Info_client : Window
+    public partial class Control : Page
     {
-        public Info_client()
+        public Control()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new ControlOborydov());
         }
     }
 }

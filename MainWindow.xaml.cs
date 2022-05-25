@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Сессия_2
+namespace Sessia
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -23,6 +23,37 @@ namespace Сессия_2
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new Abonenty());
+            Manager.MainFrame = MainFrame;
+        }
+
+        private void CRM(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new CRM());
+        }
+
+        private void Abonenty(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new Abonenty());
+        }
+
+        private void Control(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new Control());
+        }
+        private void Billing(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new Billing());
+        }
+
+        private void UserPol(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new UserPol());
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.GoBack();
         }
     }
 }

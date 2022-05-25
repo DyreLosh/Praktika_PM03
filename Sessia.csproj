@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A22913F3-D3E6-4113-A46A-B23A07934302}</ProjectGuid>
+    <ProjectGuid>{597B05BE-A719-439A-93E1-DA50AF2EC390}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Сессия_2</RootNamespace>
-    <AssemblyName>Сессия_2</AssemblyName>
+    <RootNamespace>Sessia</RootNamespace>
+    <AssemblyName>Sessia</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -55,7 +56,50 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Info_client.xaml">
+    <Compile Include="Control.xaml.cs">
+      <DependentUpon>Control.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlOborydov.xaml.cs">
+      <DependentUpon>ControlOborydov.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CRMapp.xaml.cs">
+      <DependentUpon>CRMapp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engineer.xaml.cs">
+      <DependentUpon>Engineer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.cs" />
+    <Compile Include="User.xaml.cs">
+      <DependentUpon>User.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPol.xaml.cs">
+      <DependentUpon>UserPol.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Abonenty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Billing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlOborydov.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CRM.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CRMapp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engineer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -63,17 +107,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Abonenty.xaml.cs">
+      <DependentUpon>Abonenty.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Info_client.xaml.cs">
-      <DependentUpon>Info_client.xaml</DependentUpon>
+    <Compile Include="Billing.xaml.cs">
+      <DependentUpon>Billing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CRM.xaml.cs">
+      <DependentUpon>CRM.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="User.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserPol.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -100,6 +158,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Биллинг.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\CRM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Абоненты.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Активы.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Оборудование.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Поддержка пользователей.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Лого.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

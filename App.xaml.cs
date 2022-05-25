@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Сессия_2
+namespace Sessia
 {
     /// <summary>
     /// Логика взаимодействия для App.xaml
